@@ -1,5 +1,6 @@
-provider: generic
-url: https://seu-servidor-de-atualizacao.com
+owner: vitadevtechnology
+repo: pc-no-easy-software
+provider: github
 updaterCacheDirName: pc-no-easy-updater
 publisherName:
   - PC No Easy

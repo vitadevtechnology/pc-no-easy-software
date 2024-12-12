@@ -21,6 +21,7 @@
     "rimraf": "^6.0.1"
   },
   "build": {
+    "appId": "com.pcnoeasy.app",
     "win": {
       "asarUnpack": "**/*",
       "artifactName": "${productName}-Setup-${version}.${ext}",
@@ -34,15 +35,15 @@
             "ia32"
           ]
         }
-      ],
-      "appId": "com.seuapp.id",
-      "publish": [
-        {
-          "provider": "generic",
-          "url": "https://seu-servidor-de-atualizacao.com"
-        }
       ]
     },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "vitadevtechnology",
+        "repo": "pc-no-easy-software"
+      }
+    ],
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
