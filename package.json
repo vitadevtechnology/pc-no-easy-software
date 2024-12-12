@@ -1,0 +1,58 @@
+{
+  "name": "pc-no-easy",
+  "version": "1.0.0",
+  "description": "Aplicativo para programar desligamento do computador.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^5.2.4",
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "rimraf": "^6.0.1"
+  },
+  "build": {
+    "win": {
+      "asarUnpack": "**/*",
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "icon": "assets/pcnoeasy.ico",
+      "publisherName": "PC No Easy",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "appId": "com.seuapp.id",
+      "publish": [
+        {
+          "provider": "generic",
+          "url": "https://seu-servidor-de-atualizacao.com"
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "assets/license.txt",
+      "allowElevation": true,
+      "unicode": true,
+      "installerIcon": "assets/pcnoeasy.ico",
+      "uninstallerIcon": "assets/pcnoeasy.ico",
+      "runAfterFinish": true,
+      "installerHeader": "assets/header.bmp"
+    }
+  }
+}

@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Audiowide-Regular';
+  src: url('fonts/Audiowide-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Ubuntu', sans-serif ;
+  color: white;
+}
+
+h1 {
+  background: #9000F6;
+  background: linear-gradient(90deg, #9000F6, #FF43AB, #FF43AB, #FF43AB);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  padding: 28px;
+}
+h2 {
+  background: #9000F6;
+  background: linear-gradient(30deg, #543d66, #00ffff, #543d66);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 28px;
+}
+h3 {
+  background: #9000F6;
+  background: linear-gradient(30deg, #543d66, #00ffff, #543d66);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 28px;
+}
+
+p {
+  color: white;
+}
+
+label {
+  color: #c0fffa;
+  font-size: 1.3rem;
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(30deg, #2e2138, #ff006a, #2e2138);
+}
+body {
+  background: linear-gradient(40deg, #370047, #111111, #370047, #181818);
+  background-color: #181818;
+  background-image: url("assets/site.png");
+  background-size: 200% 200%;
+  /* Expande o gradiente para maior área de animação */
+  animation: backgroundAnimation 35s ease infinite;
+  /* Animação suave */
+  display: flex;
+  flex-direction: row;
+
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 10%;
+  }
+
+  50% {
+    background-position: 0% 80%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.menu{
+  position: fixed;
+  width: 25%;
+  background-color: #352a3a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0px 1px 19px #ff3b8d;
+
+}
+.title-menu{
+  width: 100%;
+}
+.content{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  margin-left: 30%;
+
+}
+.content-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.content-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding: 28px;
+  padding-bottom: 100px;
+}
+.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding: 28px;
+  padding-bottom: 100px;
+}
+.navbar-nav{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px 0px;
+}
+.nav-itens{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+}
+.nav-link{
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Ubuntu-Bold', sans-serif;
+  color: rgb(201, 119, 255);
+  transition: all 0.45s;
+}
+.nav-link:hover{
+  text-decoration: none;
+  color: #FF43AB;
+}
+.active{
+  text-decoration: none;
+  color: #FF43AB;
+}
+#timerDropdown {
+  background-color: #00000031;
+  backdrop-filter: blur(15px);
+  padding: 12px;
+  color: #d08fff;
+  width: 350px;
+  border: solid 2px #d08fff;
+  border-radius: 8px;
+  outline: none;
+color: #00ffff;
+}
+
+#timerDropdown option{
+  background-color: #181818;
+  color: #00ffff;
+}
+
+.dropdown-sectiom{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+gap: 20px;
+
+}
+button {
+  width: 350px;
+  padding: 12px 20px;
+  background-color: #d08fff;
+  backdrop-filter: blur(15px);
+  color: #221829;
+  border: solid 2px #d08fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Ubuntu-Bold', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.45s;
+}
+button:hover{
+  background-color: #00000031;
+  backdrop-filter: blur(15px);
+  color: #d08fff;
+}
+
+
+#countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: rgb(255, 44, 125);
+  background-color: #0000002c;
+  backdrop-filter: blur(15px);
+  border: solid 2px #d08fff;
+  width: 400px;
+  height: 100px;
+  font-family: 'Audiowide-Regular', sans-serif;
+  text-transform: uppercase;
+}
+footer{
+  position: fixed;
+  width: 100%;
+  background-color: #9000f68e;
+  backdrop-filter: blur(15px);
+  bottom: 0;
+  padding: 16px;
+  color: white;
+}

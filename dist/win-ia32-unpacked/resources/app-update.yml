@@ -1,0 +1,5 @@
+provider: generic
+url: https://seu-servidor-de-atualizacao.com
+updaterCacheDirName: pc-no-easy-updater
+publisherName:
+  - PC No Easy

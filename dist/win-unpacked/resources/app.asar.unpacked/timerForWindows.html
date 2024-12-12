@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>PC NO EASY</title>
+</head>
+
+<body>
+  <div class="menu">
+    <div class="title-menu">
+      <h3>Menu</h3>
+    </div>
+    <hr class="line">
+    <ul class="navbar-nav">
+      <li class="nav-itens">
+        <a class="nav-link" href="index.html">Início</a>
+        <a class="nav-link active" href="timerForWindows.html">Timer Windows</a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="content-logo">
+      <img class="logo" src="assets/logo_navbar.png" alt="Logo PC NO EASY">
+    </div>
+    <h1>Programar Desligamento</h1>
+    <div class="content-dropdown">
+      <label for="timerDropdown">Selecione a quantidade de tempo para programar seu computador para desligar:</label>
+      <div class="dropdown-sectiom">
+        <select id="timerDropdown">
+          <option value="15">15 minutos</option>
+          <option value="30">30 minutos</option>
+          <option value="60">1 hora</option>
+          <option value="90">1 hora e 30 minutos</option>
+          <option value="120">2 horas</option>
+          <option value="150">2 horas e 30 minutos</option>
+          <option value="720">12 horas</option>
+        </select>
+        <button id="programButton">Programar</button>
+        <button id="cancelButton">Cancelar Desligamento</button>
+      </div>
+      <p id="countdown">CONTAGEM</p>
+    </div>
+    <br>
+
+
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>
